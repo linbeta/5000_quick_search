@@ -2,16 +2,16 @@ from bs4 import BeautifulSoup as bs
 from selenium import webdriver
 import main
 
-DRIVER_PATH = "D:\OneDrive\Development\Tools\chromedriver.exe"
-
-url = "https://vhpi.5000.gov.tw/"
-
-# 先用selenium取得的網頁原始碼，丟進bs裡做成湯
-driver = webdriver.Chrome(DRIVER_PATH)
-driver.get(url)
-
-source = bs(driver.page_source, "html.parser")
-driver.close()
+# DRIVER_PATH = "D:\OneDrive\Development\Tools\chromedriver.exe"
+#
+# url = "https://vhpi.5000.gov.tw/"
+#
+# # 先用selenium取得的網頁原始碼，丟進bs裡做成湯
+# driver = webdriver.Chrome(DRIVER_PATH)
+# driver.get(url)
+#
+# source = bs(driver.page_source, "html.parser")
+# driver.close()
 
 
 # 定義取得中獎號碼list的function
@@ -30,11 +30,11 @@ css_id_list = ["#domesticTravel", "#iYuan", "#agriculture", "#artFunE",
 week_1 = {}
 for n, item in enumerate(css_id_list):
     week_1[item[1::]] = get_draw_nums(css_id_list[n])
-print(week_1)
+# print(week_1)
 
 ch_names = ["國旅券", "i原券", "農遊券", "藝fun券-數位", "藝fun券-紙本", "動滋券", "客庄券", "地方創生券"]
 zh_tw = {key: ch_names[i] for i, key in enumerate(week_1)}
-print(zh_tw)
+# print(zh_tw)
 
 # TODO: 用selenium怕無法上雲端，資料其實都存在<footer>底下的script tag裡了，改抓那裡的資料處理string來分析
 # TODO: 將week_1資料存進資料庫，這樣如有新增資料只需要刷過一次就可以了
