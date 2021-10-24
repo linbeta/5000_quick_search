@@ -1,4 +1,9 @@
-# 五倍券數位綁定加碼券查詢系統
+# 五倍券數位綁定加碼券中籤查詢小工具
+
+上週看到有人做了一個一個[查詢工具](https://onlinemad.github.io/5000-lottery/)，看了以後手癢想說用Python來寫寫看應該很好玩，就動手做了。
+
+官方的查詢系統需要輸入完整身分證字號和健保卡號，還要圖形驗證碼，查起來很麻煩。這個簡易查詢只需要輸入身分證末三碼就可以查了。
+
 
 
 
@@ -9,3 +14,4 @@
 
 [Convert a String representation of a Dictionary to a dictionary?](https://stackoverflow.com/questions/988228/convert-a-string-representation-of-a-dictionary-to-a-dictionary)
 
+[振興五倍券加碼券速查](https://github.com/onlinemad/5000-lottery)
