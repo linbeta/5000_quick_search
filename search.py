@@ -1,17 +1,21 @@
+'''
+這個檔案留個紀錄而已，第一版用來爬中籤號碼的code，
+後來覺得用selenium爬運算太慢，也擔心放上GCP要跑會有問題，所以後來寫了search_v2
+'''
 from bs4 import BeautifulSoup as bs
 from selenium import webdriver
 import main
 
-# DRIVER_PATH = "D:\OneDrive\Development\Tools\chromedriver.exe"
-#
-# url = "https://vhpi.5000.gov.tw/"
-#
-# # 先用selenium取得的網頁原始碼，丟進bs裡做成湯
-# driver = webdriver.Chrome(DRIVER_PATH)
-# driver.get(url)
-#
-# source = bs(driver.page_source, "html.parser")
-# driver.close()
+DRIVER_PATH = "D:\OneDrive\Development\Tools\chromedriver.exe"
+
+url = "https://vhpi.5000.gov.tw/"
+
+# 先用selenium取得的網頁原始碼，丟進bs裡做成湯
+driver = webdriver.Chrome(DRIVER_PATH)
+driver.get(url)
+
+source = bs(driver.page_source, "html.parser")
+driver.close()
 
 
 # 定義取得中獎號碼list的function
@@ -58,3 +62,5 @@ def scan(user_input):
     if not win:
         # print("本周未中籤")
         return "本周未中籤"
+
+# print(scan("123"))

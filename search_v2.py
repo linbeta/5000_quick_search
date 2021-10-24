@@ -35,7 +35,6 @@ winNo4 = ast.literal_eval(winNo4_str)
 # 把每周中獎號字典存成list方便後續使用
 weeks = [winNo1, winNo2, winNo3, winNo4]
 
-
 # 轉換為票券中文名稱
 ch_names = ["國旅券", "i原券", "農遊券", "藝fun券-數位", "藝fun券-紙本", "動滋券", "客庄券", "地方創生券"]
 zh_tw = {key: ch_names[i] for i, key in enumerate(winNo1)}
@@ -43,18 +42,23 @@ zh_tw = {key: ch_names[i] for i, key in enumerate(winNo1)}
 
 
 # Define search function
-def scan(user_input, winNo):
-    # 從week_1中獎號字典中去loop，拿每一個獎號看是否在user_id中，有的話break(這邊也可同時處理順序和無法重複中獎的問題)，印出券種
+def scan(user_input, winNo, ticket_list):
+    '''
+    從winNo1~winNo4中獎號字典中去loop，拿每一個獎號看是否在user_id中，有的話break(這邊也可同時處理順序和無法重複中獎的問題)，印出券種。
+    ticket_list用來追蹤已中籤的券種，排除同一券種重複中獎問題，在main中存在results中。
+    '''
     win = False
     for key in winNo:
         for num in winNo[key]:
-            if num in user_input:
-                # print(f"抽中 {zh_tw[key]}")
+            if num in user_input and num[-2] == user_input[-2] and key not in ticket_list:
                 win = True
-                return f"抽中 {zh_tw[key]}"
-        # 排除重複中獎，如已經有抽中了，當周直接跳出
+                return key
+        # 排除當周重複中獎，如已經有抽中了，當周直接跳出
         if win:
             break
-    if not win:
-        # print("本周未中籤")
+    if not win and len(winNo) == 0:
+        return "尚未公布"
+    elif not win and len(winNo) < 8:
+        return "未中籤-還有機會"
+    else:
         return "未中籤"
