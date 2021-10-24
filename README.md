@@ -8,8 +8,7 @@
 
 這兩天順便練習用GCP來deploy這個小app，網址：https://quick-search-5-yfntlql7tq-de.a.run.app
 
-<img src="/ScreenShots/home.PNG" width="350">
-<img src="/ScreenShots/result.PNG" width="350">
+<img src="/ScreenShots/home.PNG" width="350"> <img src="/ScreenShots/result.PNG" width="350">
 
 
 
