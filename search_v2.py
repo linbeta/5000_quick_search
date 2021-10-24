@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import ast
-import re
-import json
 
 url = "https://vhpi.5000.gov.tw/"
 resp = requests.get(url)
