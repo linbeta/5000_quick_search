@@ -1,5 +1,5 @@
 body {
-    min-width: 320px;
+    min-width: 300px;
 }
 
 h1 {
@@ -8,7 +8,7 @@ h1 {
 
 h2, h3 {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.9rem 0.5rem;
     text-align: center;
     line-height: 1;
 }
@@ -16,7 +16,7 @@ h2, h3 {
 h3 {
     background-color: #dcecff;
     color:rgb(102, 102, 102);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 80%;
 }
 
@@ -28,7 +28,7 @@ p {
 .container-sm {
     margin: 2rem auto 1rem;
     max-width: 50%;
-    min-width: 320px;
+    min-width: 300px;
 }
 
 .custom-center {
@@ -53,9 +53,10 @@ p {
 }
 
 .notes {
-    margin: 0 auto 2rem;
+    margin: 0 auto 6rem;
     max-width: 90%;
-    min-width: 320px;
+    min-width: 300px;
+    padding: 0 1rem;
 }
 
 footer {
@@ -93,20 +94,18 @@ footer a:hover {
         font-size: 1.3rem;
     }
 
+
+}
+
+@media only screen and (max-width: 992px) {
+
     h3 {
-        font-size: 1rem;
-        padding: 12px auto;
-        width: 95%;
+        font-size: 1.2rem;
+        padding: 15px auto;
+        width: 85%;
     }
 
     .custom-center {
         max-width: 80%;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    h3 {
-        font-size: 1.3rem;
-        width: 80%;
     }
 }
