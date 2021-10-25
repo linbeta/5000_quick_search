@@ -56,7 +56,6 @@ p {
     margin: 0 auto 2rem;
     max-width: 90%;
     min-width: 320px;
-    /* margin-bottom: 2rem; */
 }
 
 footer {
@@ -65,7 +64,6 @@ footer {
     color: rgb(182, 182, 182);
     padding-top: 0.8rem;
     position: fixed;
-    /* margin-bottom: 0; */
     text-align: center;
     width: 100%;
     min-width: 320px;
@@ -80,6 +78,10 @@ footer a {
 footer a:hover {
     color: rgb(26, 141, 156);
     transition: 1s;
+}
+
+.footer-container {
+    padding: 0 1.5rem;
 }
 
 @media only screen and (max-width: 576px) {
