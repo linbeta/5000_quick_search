@@ -23,14 +23,14 @@ p {
     text-align: center;
 }
 
-.custom-center {
-    margin: 2rem auto;
+.container-sm {
+    margin: 2rem auto 1rem;
     max-width: 50%;
     min-width: 320px;
 }
 
-.container-sm {
-    margin-top: 2rem;
+.custom-center {
+    margin-top: 1rem;
 }
 
 .backButton {
@@ -51,9 +51,10 @@ p {
 }
 
 .notes {
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     max-width: 90%;
     min-width: 320px;
+    /* margin-bottom: 2rem; */
 }
 
 footer {
