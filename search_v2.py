@@ -6,7 +6,7 @@ url = "https://vhpi.5000.gov.tw/"
 resp = requests.get(url)
 
 soup = BeautifulSoup(resp.text, 'html.parser')
-script = soup.find_all("script")[2].text.split("\n\n    var ")
+script = soup.find_all("script")[-1].text.split("\n\n    var ")
 # print(script)
 
 # 第一周中獎號：winNo1
@@ -21,7 +21,8 @@ winNo2 = ast.literal_eval(winNo2_str)
 # print(winNo2)
 
 # 第三周中獎號碼：winNo3
-winNo3_str = script[2].split(" = ")[1]
+# TODO: if crash, check here to update parsing
+winNo3_str = script[2].split(" = ")[1].split(";")[0]
 winNo3 = ast.literal_eval(winNo3_str)
 # print(winNo3)
 
