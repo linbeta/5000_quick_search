@@ -16,20 +16,20 @@ winNo1 = ast.literal_eval(winNo1_str)
 # print(winNo1)
 
 # 第二周中獎號碼：winNo2
-winNo2_str = script[1].split(" = ")[1]
+winNo2_str = script[1].split("\n\n\tvar ")[0].split(" = ")[1]
 winNo2 = ast.literal_eval(winNo2_str)
 # print(winNo2)
 
-# 第三周中獎號碼：winNo3
-# TODO: if crash, check here to update parsing
-winNo3_str = script[2].split(" = ")[1].split(";")[0]
+# # 第三周中獎號碼：winNo3
+# # TODO: if crash, check here to update parsing
+winNo3_str = script[1].split("\n\n\tvar ")[1].split(" = ")[1].split(";")[0]
 winNo3 = ast.literal_eval(winNo3_str)
 # print(winNo3)
 
 # 第四周中獎號碼：winNo4 (注意這種string的切法後面要切乾淨，丟進ast.literal_eval時才能做出正確的dictionary
-winNo4_str = script[3].split("\n\n    window.")[0].split(" = ")[1]
+winNo4_str = script[2].split("\n\n    window.")[0].split(" = ")[1]
 winNo4 = ast.literal_eval(winNo4_str)
-# print(winNo4_str)
+# print(winNo4)
 
 # 把每周中獎號字典存成list方便後續使用
 weeks = [winNo1, winNo2, winNo3, winNo4]
