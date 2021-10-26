@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import ast
 import json
-import crash_handler
 
 url = "https://vhpi.5000.gov.tw/"
 resp = requests.get(url)
@@ -41,8 +40,7 @@ except:
         winNo2 = data["winNo2"]
         winNo3 = data["winNo3"]
         winNo4 = data["winNo4"]
-    # 出錯時寄個email通知我
-    crash_handler.send_alert()
+    # TODO: 出錯時寄個email通知我
 
 
 # 把每周中獎號字典存成list方便後續使用

@@ -1,4 +1,5 @@
 '''
+GCP 寄email會有問題QQ，待研究...
 這份檔案是做email通知的功能，如果程式出錯，無法及時刷新到最新中獎號時，會寄email通知我來修XD
 '''
 import smtplib
