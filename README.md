@@ -10,7 +10,9 @@
 
 <img src="/ScreenShots/home.PNG" width="350"> <img src="/ScreenShots/result.PNG" width="350">
 
+## 版本更新紀錄
 
+- 10/26 增加除錯功能： 如果即時爬取官網資料出問題時，會使用備援json檔來讀取中獎號碼備份，並寄送email通知我除錯，至少網站不會掛掉。
 
 ### 參考資料
 [Python Web Scraping: JSON in SCRIPT tags](https://www.youtube.com/watch?v=QNLBBGWEQ3Q)
