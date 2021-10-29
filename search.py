@@ -5,7 +5,7 @@
 from bs4 import BeautifulSoup as bs
 from selenium import webdriver
 
-PATH = "chromedriver.exe"
+PATH = "/chromedriver.exe"
 
 url = "https://vhpi.5000.gov.tw/"
 
@@ -33,7 +33,7 @@ css_id_list = ["#domesticTravel", "#iYuan", "#agriculture", "#artFunE",
 newest = {}
 for n, item in enumerate(css_id_list):
     newest[item[1::]] = get_draw_nums(css_id_list[n])
-# print(newest)
+print(newest)
 
 # TODO: 用selenium怕無法上雲端，資料其實都存在<footer>底下的script tag裡了，改抓那裡的資料處理string來分析
 # TODO: 將week_1資料存進資料庫，這樣如有新增資料只需要刷過一次就可以了
