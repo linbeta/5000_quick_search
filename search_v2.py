@@ -24,19 +24,18 @@ try:
 
     # 第三周中獎號碼：winNo3
     # TODO: if crash, check here to update parsing
-    winNo3_str = script[2].split("\n\n\tvar ")[0].split(" = ")[1].split(";")[0]
-    winNo3 = ast.literal_eval(winNo3_str)
+    # winNo3_str = script[2].split("\n\n\tvar ")[0].split(" = ")[1].split(";")[0]
+    # winNo3 = ast.literal_eval(winNo3_str)
     # print(winNo3)
+    winNo3 = search.newest
 
     # 第四周中獎號碼：winNo4 (注意這種string的切法後面要切乾淨，丟進ast.literal_eval時才能做出正確的dictionary
     winNo4_str = script[3].split("\n\n        window.")[0].split(" = ")[1]
     winNo4 = ast.literal_eval(winNo4_str)
     # print(winNo4)
 except:
-    print("failed")
     # 如果出錯，使用search.py的程式用selenium來取得獎號
     winNo4 = search.newest
-
     # 如果官網原始資料有異動而出錯，直接挖備援檔案winNo.json裡的資料來用
     # with open("winNo.json", "r") as backup_data:
     #     data = json.load(backup_data)
