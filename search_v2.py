@@ -37,7 +37,7 @@ try:
 
 except:
     # 如果官網原始資料有異動而出錯，直接挖備援檔案winNo.json裡的資料來用
-    print("failed")
+    # print("failed")
     with open("winNo.json", "r") as backup_data:
         data = json.load(backup_data)
         winNo1 = data["winNo1"]
